@@ -1,0 +1,52 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="html">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="head"/>
+        <xs:element name="body">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="archives">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="p"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="masterpage"/>
+                  <xs:attribute type="xs:string" name="order"/>
+                  <xs:attribute type="xs:byte" name="limit"/>
+                  <xs:attribute type="xs:date" name="start_on"/>
+                  <xs:attribute type="xs:date" name="stop_before"/>
+                  <xs:attribute type="xs:byte" name="show_future_entries"/>
+                  <xs:attribute type="xs:string" name="type"/>
+                  <xs:attribute type="xs:byte" name="startcount"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="pages">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="p"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="masterpage"/>
+                  <xs:attribute type="xs:byte" name="id"/>
+                  <xs:attribute type="xs:string" name="page_name"/>
+                  <xs:attribute type="xs:byte" name="paginate"/>
+                  <xs:attribute type="xs:string" name="offset"/>
+                  <xs:attribute type="xs:string" name="startcount"/>
+                  <xs:attribute type="xs:string" name="folder"/>
+                  <xs:attribute type="xs:byte" name="include_subfolders"/>
+                  <xs:attribute type="xs:date" name="start_on"/>
+                  <xs:attribute type="xs:date" name="stop_before"/>
+                  <xs:attribute type="xs:byte" name="show_future_entries"/>
+                  <xs:attribute type="xs:string" name="orderby"/>
+                  <xs:attribute type="xs:string" name="order"/>
+                  <xs:attribute type="xs:string" name="custom_field"/>
+                  <xs:attribute type="xs:string" name="type"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
